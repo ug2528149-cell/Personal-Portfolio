@@ -3,9 +3,9 @@ import { NavigationContainer } from
 import { createNativeStackNavigator } from
   "@react-navigation/native-stack";
 
-import TabNavigator from "./TabNavigator";
+import TabNavigator from "./tabNavigator";
 import ProjectDetailsScreen from
-  "../screens/ProjectDetailsScreen";
+  "../screens/projectDetailsScreen";
 import type { RootStackParamList } from "./types";
 import { colors } from "../theme/colors";
 

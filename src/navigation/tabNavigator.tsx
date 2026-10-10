@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from
   "@react-navigation/bottom-tabs";
 
-import HomeScreen from "../screens/HomeScreen";
-import SkillsScreen from "../screens/SkillsScreen";
-import ProjectsScreen from "../screens/ProjectsScreen";
-import EditProfileScreen from "../screens/EditProfileScreen";
-import AboutScreen from "../screens/AboutScreen";
+import HomeScreen from "../screens/homeScreen";
+import SkillsScreen from "../screens/skillsScreen";
+import ProjectsScreen from "../screens/projectsScreen";
+import EditProfileScreen from "../screens/editProfileScreen";
+import AboutScreen from "../screens/aboutScreen";
 import type { TabParamList } from "./types";
 import { colors } from "../theme/colors";
 

@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from "./src/navigation/rootNavigator";
 
 export default function App() {
   return (
