@@ -23,15 +23,7 @@ const COLORS = {
   advanced: "#B7A0FF",
 };
 
-type SkillsScreenProps = {
-  navigation?: {
-    navigate: (screen: string) => void;
-  };
-};
-
-export default function SkillsScreen({
-  navigation: _navigation,
-}: SkillsScreenProps) {
+export default function SkillsScreen() {
   const skillCount = skills.length;
 
   return (
@@ -41,16 +33,19 @@ export default function SkillsScreen({
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        {/* Page heading */}
         <View style={styles.header}>
-          <Text style={styles.eyebrow}>MY CAPABILITIES</Text>
+          <Text style={styles.eyebrow}>
+            MY CAPABILITIES
+          </Text>
 
           <Text
             style={styles.title}
             accessibilityRole="header"
           >
             Skills &{"\n"}
-            <Text style={styles.titleAccent}>Education.</Text>
+            <Text style={styles.titleAccent}>
+              Education.
+            </Text>
           </Text>
 
           <Text style={styles.subtitle}>
@@ -63,7 +58,9 @@ export default function SkillsScreen({
         <View style={styles.overviewCard}>
           <View style={styles.overviewTopRow}>
             <View style={styles.overviewIcon}>
-              <Text style={styles.overviewIconText}>✳</Text>
+              <Text style={styles.overviewIconText}>
+                ✳
+              </Text>
             </View>
 
             <View style={styles.overviewBadge}>
@@ -88,13 +85,17 @@ export default function SkillsScreen({
           </Text>
         </View>
 
-        {/* Skill levels legend */}
+        {/* Skills section */}
         <View style={styles.sectionHeader}>
           <View style={styles.sectionHeadingText}>
             <Text style={styles.sectionEyebrow}>
               WHAT I AM LEARNING
             </Text>
-            <Text style={styles.sectionTitle}>
+
+            <Text
+              style={styles.sectionTitle}
+              accessibilityRole="header"
+            >
               My Skills
             </Text>
           </View>
@@ -102,6 +103,7 @@ export default function SkillsScreen({
           <View style={styles.sectionAccent} />
         </View>
 
+        {/* Skill level legend */}
         <View style={styles.legend}>
           <View style={styles.legendItem}>
             <View
@@ -110,7 +112,9 @@ export default function SkillsScreen({
                 { backgroundColor: COLORS.beginner },
               ]}
             />
-            <Text style={styles.legendText}>Beginner</Text>
+            <Text style={styles.legendText}>
+              Beginner
+            </Text>
           </View>
 
           <View style={styles.legendItem}>
@@ -120,7 +124,9 @@ export default function SkillsScreen({
                 { backgroundColor: COLORS.intermediate },
               ]}
             />
-            <Text style={styles.legendText}>Intermediate</Text>
+            <Text style={styles.legendText}>
+              Intermediate
+            </Text>
           </View>
 
           <View style={styles.legendItem}>
@@ -130,7 +136,9 @@ export default function SkillsScreen({
                 { backgroundColor: COLORS.advanced },
               ]}
             />
-            <Text style={styles.legendText}>Advanced</Text>
+            <Text style={styles.legendText}>
+              Advanced
+            </Text>
           </View>
         </View>
 
@@ -154,9 +162,11 @@ export default function SkillsScreen({
         ) : (
           <View style={styles.emptyState}>
             <Text style={styles.emptyIcon}>✳</Text>
+
             <Text style={styles.emptyTitle}>
               Your skills start here
             </Text>
+
             <Text style={styles.emptyDescription}>
               Add your genuine skills to src/data/skills.ts
               to display them in your portfolio.
@@ -164,13 +174,17 @@ export default function SkillsScreen({
           </View>
         )}
 
-        {/* Education heading */}
+        {/* Education section */}
         <View style={styles.sectionHeader}>
           <View style={styles.sectionHeadingText}>
             <Text style={styles.sectionEyebrow}>
               MY LEARNING JOURNEY
             </Text>
-            <Text style={styles.sectionTitle}>
+
+            <Text
+              style={styles.sectionTitle}
+              accessibilityRole="header"
+            >
               Education
             </Text>
           </View>
@@ -200,23 +214,43 @@ export default function SkillsScreen({
                 </View>
 
                 <View style={styles.educationCard}>
-                  <Text style={styles.educationPeriod}>
-                    {item.period}
-                  </Text>
+                  <View style={styles.educationTopRow}>
+                    <Text style={styles.educationPeriod}>
+                      {item.period}
+                    </Text>
+
+                    <View
+                      style={[
+                        styles.educationStatus,
+                        item.status === "In Progress"
+                          ? styles.statusInProgress
+                          : styles.statusCompleted,
+                      ]}
+                    >
+                      <Text
+                        style={[
+                          styles.educationStatusText,
+                          item.status === "In Progress"
+                            ? styles.statusTextInProgress
+                            : styles.statusTextCompleted,
+                        ]}
+                      >
+                        {item.status}
+                      </Text>
+                    </View>
+                  </View>
 
                   <Text style={styles.educationTitle}>
-                    {item.title}
+                    {item.qualification}
                   </Text>
 
                   <Text style={styles.educationInstitution}>
                     {item.institution}
                   </Text>
 
-                  {item.description ? (
-                    <Text style={styles.educationDescription}>
-                      {item.description}
-                    </Text>
-                  ) : null}
+                  <Text style={styles.educationDescription}>
+                    {item.description}
+                  </Text>
                 </View>
               </View>
             ))}
@@ -226,6 +260,7 @@ export default function SkillsScreen({
             <Text style={styles.emptyTitle}>
               Education timeline
             </Text>
+
             <Text style={styles.emptyDescription}>
               Add your academic background to
               src/data/education.ts.
@@ -233,7 +268,7 @@ export default function SkillsScreen({
           </View>
         )}
 
-        {/* Closing card */}
+        {/* Closing message */}
         <View style={styles.closingCard}>
           <View style={styles.closingAccent} />
 
@@ -390,6 +425,7 @@ const styles = StyleSheet.create({
   },
 
   sectionHeadingText: {
+    flex: 1,
     gap: 6,
   },
 
@@ -439,8 +475,6 @@ const styles = StyleSheet.create({
   },
 
   skillsGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
     gap: 12,
   },
 
@@ -529,11 +563,49 @@ const styles = StyleSheet.create({
     gap: 8,
   },
 
+  educationTopRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: 8,
+  },
+
   educationPeriod: {
     color: COLORS.accent,
     fontSize: 10,
     fontWeight: "800",
     letterSpacing: 0.7,
+  },
+
+  educationStatus: {
+    borderWidth: 1,
+    borderRadius: 20,
+    paddingHorizontal: 9,
+    paddingVertical: 5,
+  },
+
+  statusInProgress: {
+    borderColor: COLORS.accent,
+    backgroundColor: "#303B22",
+  },
+
+  statusCompleted: {
+    borderColor: COLORS.border,
+    backgroundColor: COLORS.background,
+  },
+
+  educationStatusText: {
+    fontSize: 9,
+    fontWeight: "800",
+  },
+
+  statusTextInProgress: {
+    color: COLORS.accent,
+  },
+
+  statusTextCompleted: {
+    color: COLORS.muted,
   },
 
   educationTitle: {
