@@ -26,7 +26,7 @@ export const skills: Skill[] = [
     category: "Mobile Development",
     description:
       "Building mobile interfaces with reusable components and hooks.",
-    level: "Beginner",
+    level: "Intermediate",
   },
   {
     id: "skill-3",
@@ -34,7 +34,7 @@ export const skills: Skill[] = [
     category: "Mobile Development",
     description:
       "Developing, testing, and preparing React Native applications for release.",
-    level: "Beginner",
+    level: "Intermediate",
   },
   {
     id: "skill-4",
@@ -42,7 +42,7 @@ export const skills: Skill[] = [
     category: "Development Tools",
     description:
       "Tracking source-code changes and managing project repositories.",
-    level: "Beginner",
+    level: "Advanced",
   },
   {
     id: "skill-5",

@@ -42,7 +42,7 @@ type EditProfileScreenProps = {
 };
 
 const DEFAULT_PROFILE: EditableProfile = {
-  headline: "Aspiring Software Developer",
+  headline: "Software Developer",
   bio: "I am a technology enthusiast passionate about learning and building useful applications.",
   primarySkill: "React Native",
   availableForOpportunities: true,
@@ -207,7 +207,7 @@ export default function EditProfileScreen({
                 headline: undefined,
               }));
             }}
-            placeholder="e.g. Aspiring Software Developer"
+            placeholder="e.g. Software Developer"
             placeholderTextColor={COLORS.muted}
             maxLength={60}
             accessibilityLabel="Professional headline"

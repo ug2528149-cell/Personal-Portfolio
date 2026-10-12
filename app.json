@@ -1,9 +1,15 @@
 {
   "expo": {
-    "name": "Personal Portfolio",
-    "slug": "personal-portfolio",
+    "name": "Prince Portfolio",
+    "slug": "prince-portfolio",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "userInterfaceStyle": "automatic"
+    "android": {
+      "package": "com.princeportfolio.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1894c398-55bc-454b-89a5-96da009a9c00"
+      }
+    }
   }
 }

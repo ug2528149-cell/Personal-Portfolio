@@ -14,18 +14,18 @@ export const educationData: Education[] = [
   {
     id: "education-1",
     institution: "INES – Ruhengeri",
-    qualification: "Your Actual Degree or Programme",
+    qualification: "Bachelor's Degree",
     period: "2024 – Present",
-    description: "Describe your current studies, relevant coursework, and knowledge gained. Replace this example with your actual academic details.",
+    description: "I am particularly a software engineering/developer student, I particularly love learning advanced Programming languages like JavaScript and Python, but I hope to involve in cloud computing if not Cybersecurity.",
     status: "In Progress",
     title: undefined
   },
   {
     id: "education-2",
-    institution: "Your Previous School or Institution",
-    qualification: "Your Previous Qualification",
-    period: "2021 – 2024",
-    description: "Add a concise summary of your previous education or training and any relevant achievements.",
+    institution: "GYM",
+    qualification: "Certificate",
+    period: "2025 – 2026",
+    description: "This was one of the greatest moment I enjoyed at Campus. It took a full year which was an intense one of learning JavaScript Fundamentals, React, TypeScript, Website Cloning, Touch typing to mention but a few",
     status: "Completed",
     title: undefined
   },

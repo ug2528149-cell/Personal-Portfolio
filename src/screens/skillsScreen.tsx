@@ -284,7 +284,7 @@ export default function SkillsScreen() {
         </View>
 
         <Text style={styles.footer}>
-          PERSONAL PORTFOLIO · SKILLS & EDUCATION
+          PRINCE PORTFOLIO · HERE FOR CHANGE
         </Text>
       </ScrollView>
     </SafeAreaView>

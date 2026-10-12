@@ -177,7 +177,7 @@ export default function ProjectsScreen({
           <View style={styles.emptyState}>
             <Text style={styles.emptyIcon}>✳</Text>
             <Text style={styles.emptyTitle}>
-              Your projects start here
+              Prince' projects start here
             </Text>
             <Text style={styles.emptyDescription}>
               Add at least two genuine student projects to
@@ -199,7 +199,7 @@ export default function ProjectsScreen({
         </View>
 
         <Text style={styles.footer}>
-          PERSONAL PORTFOLIO · PROJECT COLLECTION
+          PRINCE' PORTFOLIO · PROJECT COLLECTION
         </Text>
       </ScrollView>
     </SafeAreaView>

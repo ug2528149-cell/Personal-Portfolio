@@ -213,7 +213,7 @@ export default function ProjectDetailsScreen({
         </TouchableOpacity>
 
         <Text style={styles.footerNote}>
-          Personal Portfolio · Project Case Study
+          Prince' Portfolio · Project Case Study
         </Text>
       </ScrollView>
     </SafeAreaView>

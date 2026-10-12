@@ -16,10 +16,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "project-one",
-    title: "Personal Portfolio App",
+    title: "Prince Portfolio App",
     category: "Mobile Development",
     description:
-      "A personal portfolio application designed to introduce my background, skills, education, and software projects.",
+      "This portfolio application is designed to introduce my background, skills, education, and software projects.",
     problem:
       "A traditional CV does not demonstrate mobile interface design, application navigation, local data persistence, or practical development skills.",
     contribution:
@@ -37,20 +37,20 @@ export const projects: Project[] = [
   },
   {
     id: "project-two",
-    title: "Your Actual Student Project",
+    title: "AfriHomes Campus",
     category: "Software Development",
     description:
-      "Replace this description with a concise explanation of a real application, website, or programming project you have worked on.",
+      "This is to make life of Campus students easier, the project was to sort the issue all students whether the local ones or international ones all face.",
     problem:
-      "Explain the specific problem your project was designed to solve and who would benefit from the solution.",
+      "Since am a student too, I found out that getting rental houses for students was really hard so I organised a group and we built the project AfriHomes Campus for students to easily access rentals wherever they might be.",
     contribution:
-      "Describe the parts you personally designed, implemented, tested, or documented. Be specific about your own contribution.",
+      "I the member of AfriHomes Campus team, I surveyed for the houses that are vacant to take their pictures and be part of the experimentals. I also designed the Chatbot that could translate into Kinyarwanda and English language for both international and home students.",
     technologies: [
-      "Replace with your actual technology",
-      "Another actual technology",
+      "Paying the domains to host it on Google",
+      "Website and Camera",
     ],
     outcome:
-      "Describe the actual result, current status, or what you learned. Do not claim deployment or success that has not occurred.",
+      "TYes, the project is good but not yet spread to the whole society so that can be used and trusted by the house owners.",
     status: "In Progress",
     featured: false,
   },
